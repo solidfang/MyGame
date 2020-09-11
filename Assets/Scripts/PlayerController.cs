@@ -43,19 +43,20 @@ public class PlayerController : MonoBehaviour
 
     }
 
-/*    void OnCollisionEnter(Collision other)
+    void OnCollisionEnter(Collision other)
     {
 
       if (other.gameObject.name == "Sphere")
       {
-        Calculate Angle Between the collision point and the player
+        //Calculate Angle Between the collision point and the player
         Vector3 dir = other.gameObject.transform.position - transform.position;
+        dir.y = 0;
          // And finally we add force in the direction of dir and multiply it by force.
          // This will push back the player
 
         Debug.Log(dir);
-        other.gameObject.GetComponent<Rigidbody>().AddForce(dir * 100 * Time.deltaTime);
+        other.gameObject.GetComponent<Rigidbody>().AddForce(dir * 1000 * Time.deltaTime);
       }
     }
-*/
+
 }
